@@ -1,0 +1,23 @@
+package com.keshen.library.service;
+
+import com.keshen.library.pojo.Book;
+import com.keshen.library.pojo.Category;
+import com.keshen.library.util.PageBean;
+
+import java.util.List;
+import java.util.Map;
+
+public interface BookService {
+
+    PageBean<Book> queryBookPage(Map<String, Object> paramMap);
+
+    List<Category> listCategory();
+
+    void addBook(Book book);
+
+    Book selectById(int book_id);
+
+    void updateBook(Book book);
+
+    void delBook(int book_id);
+}

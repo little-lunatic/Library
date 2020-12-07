@@ -2,8 +2,8 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.wdd.library.dao.BookMapper">
-    <resultMap type="com.wdd.library.pojo.Book" id="bookinfo">
+<mapper namespace="com.keshen.library.dao.BookMapper">
+    <resultMap type="com.keshen.library.pojo.Book" id="bookinfo">
         <!-- 一对一关联 -->
         <!-- 一个书对应一种类别 -->
         <result column="book_id" property="book_id"/>
@@ -17,7 +17,7 @@
         <result column="pubdate" property="pubdate"/>
         <result column="stock" property="stock"/>
         <!--property中是Bookinfo类中的Category变量名 category  -->
-        <association  javaType="com.wdd.library.pojo.Category" property="category">
+        <association javaType="com.keshen.library.pojo.Category" property="category">
             <result column="cid" property="cid"/>
             <result column="cname" property="cname"/>
         </association>

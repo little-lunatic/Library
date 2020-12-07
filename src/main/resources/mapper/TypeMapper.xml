@@ -2,8 +2,8 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.wdd.library.dao.TypeMapper">
-    <resultMap type="com.wdd.library.pojo.Category" id="typeinfo">
+<mapper namespace="com.keshen.library.dao.TypeMapper">
+    <resultMap type="com.keshen.library.pojo.Category" id="typeinfo">
         <result column="cid" property="cid"/>
         <result column="cname" property="cname"/>
     </resultMap>

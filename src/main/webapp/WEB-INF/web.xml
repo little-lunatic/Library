@@ -12,23 +12,14 @@
     <param-name>contextConfigLocation</param-name>
     <param-value>classpath*:spring/spring-*.xml</param-value>
   </context-param>
-  <!-- 监听器: 创建spring框架的IOC容器
-               将IOC容器对象存放到application域中
-               ApplicationContext ioc = WebApplicationContextUtils.getWebApplicationContext(application)
 
-               ContextLoaderListener extends ContextLoader implements ServletContextListener
-               ServletContextListener监听器接口:
-                  监听ServletContext创建和销毁
-                      如果监听到ServletContext创建(服务器启动) ，就会创建IOC容器。
-                      如果监听到ServletContext销毁(服务器停止或卸载项目) ，就会销毁IOC容器。
-   -->
   <listener>
     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
   </listener>
 
-  <!--  -->
+  <!---->
   <listener>
-    <listener-class>com.wdd.library.listener.StartSystemListener</listener-class>
+    <listener-class>com.keshen.library.listener.StartSystemListener</listener-class>
   </listener>
 
   <!-- 字符编码过滤器 -->
@@ -47,15 +38,10 @@
   <filter-mapping>
     <filter-name>encoding</filter-name>
     <url-pattern>/*</url-pattern>
-    <!--
-      <dispatcher>REQUEST</dispatcher>
-    -->
   </filter-mapping>
 
 
-  <!--支持RESTful风格，将POST请求转换为PUT或DELETE请求
-      会读取隐含参数  "_method "
-  -->
+  <!--支持RESTFul风格，将POST请求转换为PUT或DELETE请求会读取隐含参数  "_method "-->
   <filter>
     <filter-name>HiddenHttpMethodFilter</filter-name>
     <filter-class>org.springframework.web.filter.HiddenHttpMethodFilter</filter-class>
@@ -65,6 +51,7 @@
     <servlet-name>springmvc</servlet-name>
   </filter-mapping>
 
+  <!--前端控制器-->
   <servlet>
     <servlet-name>springmvc</servlet-name>
     <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>

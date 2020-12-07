@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.wdd.library.dao.LendInfoMapper">
+<mapper namespace="com.keshen.library.dao.LendInfoMapper">
     <!--<resultMap type="com.wdd.library.pojo.LendInfo" id="Lendinfo">-->
         <!--<result column="id" property="id"/>-->
         <!--<result column="reader_id" property="reader_id"/>-->
