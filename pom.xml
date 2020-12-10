@@ -112,7 +112,7 @@
     <dependency>
       <groupId>javax.servlet.jsp.jstl</groupId>
       <artifactId>jstl-api</artifactId>
-      <version>1.2-rev-1</version>
+      <version>1.2</version>
     </dependency>
     <dependency>
       <groupId>taglibs</groupId>

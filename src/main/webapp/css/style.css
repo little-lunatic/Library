@@ -1,6 +1,6 @@
-
-@charset "utf-8";
-
+body {
+    background-image: url("../images/timg.jpg") ;
+}
 .layui-header {
     background: none;
 }
@@ -179,10 +179,6 @@
 }
 
 /* login */
-.login-body {
-    background: url("../image/bg.png") repeat fixed;
-}
-
 .login-box {
     position: fixed;
     top: 0;

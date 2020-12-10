@@ -42,8 +42,8 @@
 
 
 <script type="text/javascript">
-    layui.use(['form','layer','jquery'], function () {
 
+    layui.use(['form','layer','jquery'], function () {
         // 操作对象
         var form = layui.form;
         var $ = layui.jquery;
@@ -70,8 +70,9 @@
             return false;
         })
     });
+
     function forgetpsw(){
-        layer.msg('联系管理员(1710031565)或到图书馆进行重置');
+        layer.msg('联系管理员(4399)或到图书馆进行重置');
     }
 </script>
 </body>

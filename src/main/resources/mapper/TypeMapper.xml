@@ -10,19 +10,19 @@
 
     <!--查询所有图书类别-->
     <select id="listCategory" resultMap="typeinfo" >
-        SELECT *
-        from class_info
+        SELECT * from class_info
     </select>
 
     <!-- 修改图书类别 -->
     <update id="updateBookType" parameterType="Category" >
-        UPDATE  class_info SET cname=#{cname}
+        UPDATE  class_info
+        SET cname=#{cname}
         where cid=#{cid}
     </update>
 
     <!-- 删除图书类别 -->
     <delete id="delBookType" parameterType="int" >
-        delete from  class_info where cid=#{cid}
+        delete from class_info where cid=#{cid}
     </delete>
 
     <!-- 添加图书类别 -->

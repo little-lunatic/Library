@@ -4,7 +4,9 @@
     <facet type="jpa" name="JPA">
       <configuration>
         <setting name="validation-enabled" value="true" />
-        <datasource-mapping />
+        <datasource-mapping>
+          <factory-entry name="MyLibrary" />
+        </datasource-mapping>
         <naming-strategy-map />
       </configuration>
     </facet>
@@ -59,7 +61,7 @@
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.7" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-log4j12:1.7.7" level="project" />
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.37" level="project" />
-    <orderEntry type="library" name="Maven: javax.servlet.jsp.jstl:jstl-api:1.2-rev-1" level="project" />
+    <orderEntry type="library" name="Maven: javax.servlet.jsp.jstl:jstl-api:1.2" level="project" />
     <orderEntry type="library" name="Maven: taglibs:standard:1.1.2" level="project" />
     <orderEntry type="library" name="Maven: net.sf.ehcache:ehcache:1.6.2" level="project" />
     <orderEntry type="library" name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.9.2" level="project" />

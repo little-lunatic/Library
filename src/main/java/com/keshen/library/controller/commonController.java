@@ -32,17 +32,20 @@ public class commonController {
     @Autowired
     private LendInfoSerivce lendInfoSerivce;
 
+
     //跳转登录界面
     @RequestMapping("/toLogin")
     public String login(){
         return "login";
     }
 
+
     //跳转注册界面
     @RequestMapping("/toRegister")
     public String toRegister(){
         return "register";
     }
+
 
     //注册是查询是否存在该读者
     @RequestMapping("/checkReader")
