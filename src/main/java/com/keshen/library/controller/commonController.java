@@ -123,9 +123,10 @@ public class commonController {
         return ajaxResult;
     }
 
-    //推出
+    //退出
     @RequestMapping("/loginout")
     public String loginout(HttpSession session){
+        //调用session.invalidate(),代表该session被删除，所有信息丢失
         session.invalidate();
         return "login";
     }

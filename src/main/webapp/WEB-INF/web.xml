@@ -1,5 +1,5 @@
 <!DOCTYPE web-app PUBLIC
-        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "-//Sun Microsystems, Inc/DTD Web Application 2.3//EN"
         "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -12,14 +12,8 @@
     <param-name>contextConfigLocation</param-name>
     <param-value>classpath*:spring/spring-*.xml</param-value>
   </context-param>
-
   <listener>
     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-  </listener>
-
-  <!---->
-  <listener>
-    <listener-class>com.keshen.library.listener.StartSystemListener</listener-class>
   </listener>
 
   <!-- 字符编码过滤器 -->
@@ -41,7 +35,7 @@
   </filter-mapping>
 
 
-  <!--支持RESTFul风格，将POST请求转换为PUT或DELETE请求会读取隐含参数  "_method "-->
+  <!--支持RESTFul风格，将POST请求转换为PUT或DELETE请求会读取隐含参数"_method "-->
   <filter>
     <filter-name>HiddenHttpMethodFilter</filter-name>
     <filter-class>org.springframework.web.filter.HiddenHttpMethodFilter</filter-class>
@@ -56,6 +50,7 @@
     <servlet-name>springmvc</servlet-name>
     <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
     <init-param>
+      <!--绑定springmvc配置文件-->
       <param-name>contextConfigLocation</param-name>
       <param-value>classpath:spring/springmvc-context.xml</param-value>
     </init-param>

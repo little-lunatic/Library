@@ -5,16 +5,16 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>图书管理系统登录</title>
-    <link rel="stylesheet" href="${APP_PATH}/css/layui.css">
-    <link rel="stylesheet" href="${APP_PATH}/css/style.css">
-    <link rel="stylesheet" href="${APP_PATH}/css/modules/layer/default/layer.css">
-    <script src="${APP_PATH}/js/layui.js"></script>
+    <link rel="stylesheet" href="css/layui.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modules/layer/default/layer.css">
+    <script src="js/layui.js"></script>
 </head>
 <body>
 
 <div class="login-main">
     <header class="layui-elip">图书管理系统登录</header>
-    <form class="layui-form" action="${APP_PATH}/library/list.action" method="post">
+    <form class="layui-form" action="library/list.action" method="post">
         <div class="layui-input-inline">
             <input type="text" name="name" required lay-verify="required" placeholder="学号" autocomplete="off"
                    class="layui-input">
@@ -35,7 +35,7 @@
             <button lay-submit lay-filter="login" class="layui-btn">登录</button>
         </div>
         <hr/>
-        <p><a href="${APP_PATH}/toRegister.htm" class="fl">立即注册</a><a href="javascript:;" onclick="forgetpsw();" class="fr">忘记密码？</a></p>
+        <p><a href="toRegister.htm" class="fl">立即注册</a><a href="javascript:;" onclick="forgetpsw();" class="fr">忘记密码？</a></p>
     </form>
 </div>
 
@@ -50,15 +50,15 @@
 
         form.on('submit(login)',function (data) {
             $.ajax({
-                url:'${APP_PATH}/doLogin.do',
+                url:'doLogin.do',
                 data:data.field,
                 dataType:'json',
                 type:'post',
                 success:function (data) {
                     if (data.status == '0'){
-                        location.href = "${APP_PATH}/library/index.do";
+                        location.href = "library/index.do";
                     }else if (data.status == '1') {
-                        location.href = "${APP_PATH}/library/frontIndex.htm";
+                        location.href = "library/frontIndex.htm";
                     }else if (data.status == '2'){
                         layer.msg(data.message);
                     }else{

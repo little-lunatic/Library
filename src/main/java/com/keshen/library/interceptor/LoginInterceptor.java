@@ -32,8 +32,10 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
 
         //2.判断用户是否登录 会员是否登录
         HttpSession session = request.getSession();
+
         Object admin = session.getAttribute(Const.ADMIN);
         Object reader = session.getAttribute(Const.READER);
+
         if(admin!=null || reader!=null){
             return true;
         }else{

@@ -12,10 +12,10 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" href="${APP_path}/css/layui.css">
-    <link rel="stylesheet" href="${APP_path}/css/modules/code.css">
-    <link rel="stylesheet" href="${APP_path}/css/modules/laydate/default/laydate.css">
-    <link rel="stylesheet" href="${APP_path}/css/modules/layer/default/layer.css">
+    <link rel="stylesheet" href="css/layui.css">
+    <link rel="stylesheet" href="css/modules/code.css">
+    <link rel="stylesheet" href="css/modules/laydate/default/laydate.css">
+    <link rel="stylesheet" href="css/modules/layer/default/layer.css">
     <title></title>
     <style type="text/css">
         .layui-table-cell{
@@ -34,17 +34,17 @@
             <li class="layui-nav-item">
                 <a href="javascript:;">图书管理</a>
                 <dl class="layui-nav-child">
-                    <dd><a href="${APP_path}/library/index.do">图书列表</a></dd>
-                    <dd><a href="${APP_path}/type/bookType.do">分类管理</a></dd>
+                    <dd><a href="library/index.do">图书列表</a></dd>
+                    <dd><a href="type/bookType.do">分类管理</a></dd>
                 </dl>
             </li>
-            <li class="layui-nav-item"><a href="${APP_path}/reader/readerIndex.htm">读者列表</a></li>
-            <li class="layui-nav-item"><a href="${APP_path}/listDisBackAdmin.htm">借阅管理</a></li>
+            <li class="layui-nav-item"><a href="reader/readerIndex.htm">读者列表</a></li>
+            <li class="layui-nav-item"><a href="listDisBackAdmin.htm">借阅管理</a></li>
             <li class="layui-nav-item"><a onclick="alterPwd('0');">修改密码</a></li>
         </c:if>
         <c:if test="${reader!=null}">
-            <li class="layui-nav-item"><a href="${APP_path}/library/frontIndex.htm">图书列表</a></li>
-            <li class="layui-nav-item"><a href="${APP_path}/listDisBack.htm">借阅记录</a></li>
+            <li class="layui-nav-item"><a href="library/frontIndex.htm">图书列表</a></li>
+            <li class="layui-nav-item"><a href="listDisBack.htm">借阅记录</a></li>
             <li class="layui-nav-item"><a onclick="alterPwd('1');">修改密码</a></li>
         </c:if>
     </ul>
@@ -56,14 +56,14 @@
                 ${admin.name}
             </a>
         </li>
-        <li class="layui-nav-item"><a href="${APP_path}/loginout.htm">退出</a></li>
+        <li class="layui-nav-item"><a href="loginout.htm">退出</a></li>
     </ul>
 </div>
 
 
 <div style="padding: 15px;">
 </body>
-<script src="${APP_path}/js/layui.js"></script>
+<script src="js/layui.js"></script>
 <script>
 
     function alterPwd(state){//添加
@@ -72,7 +72,7 @@
             title: '修改密码',
             skin: 'layui-layer-demo', //加上边框
             area: ['500px', '300px'], //宽高
-            content: '${APP_path}/toAlterpwdPage.do?state='+state
+            content: 'toAlterpwdPage.do?state='+state
         });
     }
 

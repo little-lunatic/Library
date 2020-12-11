@@ -52,10 +52,10 @@
         var element = layui.element;
 
     });
-    var url = "${APP_PATH}/"
+    var url = ""
 </script>
 
-<script src="${APP_PATH}/js/layui.js"></script>
+<script src="js/layui.js"></script>
 <script>
 
 
@@ -82,7 +82,7 @@
         table.render({
             elem: '#demo'
             ,height: 550
-            ,url: '${APP_PATH}/listDisBackBook.do?power=1' //数据接口
+            ,url: 'listDisBackBook.do?power=1' //数据接口
             ,title: '图书表'
             ,page: true
             ,limit: 6
@@ -142,7 +142,7 @@
         });
         function backBook(data1,obj,index){
             $.ajax({
-                url:'${APP_PATH}/backBook.do?reader_id='+data1.reader_id+'&book_id='+data1.book_id,
+                url:'backBook.do?reader_id='+data1.reader_id+'&book_id='+data1.book_id,
                 dataType:'json',
                 type:'post',
                 success:function (data) {

@@ -49,10 +49,10 @@
         var element = layui.element;
 
     });
-    var url = "${APP_PATH}/"
+    var url = ""
 </script>
 
-<script src="${APP_PATH}/js/layui.js"></script>
+<script src="js/layui.js"></script>
 <script>
 
 
@@ -79,7 +79,7 @@
         table.render({
             elem: '#demo'
             ,height: 550
-            ,url: '${APP_PATH}/listDisBackBook.do' //数据接口
+            ,url: 'listDisBackBook.do' //数据接口
             ,title: '图书表'
             ,page: true
             ,limit: 6

@@ -49,11 +49,11 @@
         var element = layui.element;
 
     });
-    var url = "${APP_PATH}/"
+    var url = ""
 </script>
 
-<script src="${APP_PATH}/js/layui.js"></script>
-<%--<script src="${APP_PATH}/js/reader/CRUDreader.js"></script>--%>
+<script src="js/layui.js"></script>
+<%--<script src="js/reader/CRUDreader.js"></script>--%>
 <script>
 
 
@@ -68,7 +68,7 @@
             title: '添加读者',
             skin: 'layui-layer-demo', //加上边框
             area: ['800px', '500px'], //宽高
-            content: '${APP_PATH}/reader/addReader.htm'
+            content: 'reader/addReader.htm'
         });
     }
 
@@ -88,7 +88,7 @@
         table.render({
             elem: '#demo'
             ,height: 550
-            ,url: '${APP_PATH}/reader/listReader.do' //数据接口
+            ,url: 'reader/listReader.do' //数据接口
             ,title: '图书表'
             ,page: true
             ,limit: 6
@@ -150,7 +150,7 @@
         function del(id,obj,index){
 
             $.ajax({
-                url:'${APP_PATH}/reader/delReader.do?id='+id,
+                url:'reader/delReader.do?id='+id,
                 dataType:'json',
                 type:'post',
                 success:function (data) {
@@ -173,7 +173,7 @@
                 skin: 'layui-layer-demo', //加上边框
                 area: ['800px', '500px'], //宽高
                 method: 'post',
-                content: '${APP_PATH}/reader/editReader.do?'
+                content: 'reader/editReader.do?'
                 +'id='+data.id
             });
         }
@@ -185,7 +185,7 @@
                 skin: 'layui-layer-demo', //加上边框
                 area: ['800px', '500px'], //宽高
                 method: 'post',
-                content: '${APP_PATH}/reader/findReader.do?'
+                content: 'reader/findReader.do?'
                 +'id='+data.id
             });
         }
