@@ -5,9 +5,9 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>图书管理系统登录</title>
-    <link rel="stylesheet" href="css/layui.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/modules/layer/default/layer.css">
+    <link rel="stylesheet" href="/css/layui.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/modules/layer/default/layer.css">
     <script src="js/layui.js"></script>
 </head>
 <body>
@@ -35,7 +35,10 @@
             <button lay-submit lay-filter="login" class="layui-btn">登录</button>
         </div>
         <hr/>
-        <p><a href="toRegister.htm" class="fl">立即注册</a><a href="javascript:;" onclick="forgetpsw();" class="fr">忘记密码？</a></p>
+        <p>
+            <a href="toRegister.htm" class="fl">立即注册</a>
+            <a href="javascript:;" onclick="forgetpsw();" class="fr">忘记密码？</a>
+        </p>
     </form>
 </div>
 
@@ -57,10 +60,13 @@
                 success:function (data) {
                     if (data.status == '0'){
                         location.href = "library/index.do";
+
                     }else if (data.status == '1') {
                         location.href = "library/frontIndex.htm";
+
                     }else if (data.status == '2'){
                         layer.msg(data.message);
+
                     }else{
                         //服务器异常
                         layer.msg(data.message);

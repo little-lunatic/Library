@@ -34,7 +34,7 @@ public class commonController {
 
 
     //跳转登录界面
-    @RequestMapping("/toLogin")
+    @RequestMapping("/tLogin")
     public String login(){
         return "login";
     }

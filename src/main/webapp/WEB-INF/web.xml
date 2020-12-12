@@ -8,13 +8,17 @@
          version="2.5">
   <display-name>Archetype Created Web Application</display-name>
 
-  <context-param>
-    <param-name>contextConfigLocation</param-name>
-    <param-value>classpath*:spring/spring-*.xml</param-value>
-  </context-param>
+  <!-- spring监听器-->
   <listener>
     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
   </listener>
+  <listener>
+    <listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
+  </listener>
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>classpath*:spring/spring-context.xml</param-value>
+  </context-param>
 
   <!-- 字符编码过滤器 -->
   <filter>

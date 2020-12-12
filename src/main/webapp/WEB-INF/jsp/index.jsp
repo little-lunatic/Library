@@ -44,9 +44,6 @@
 
 <table class="layui-hide" id="demo" lay-filter="test"></table>
 
-<%--<div class="layui-tab-item layui-show">--%>
-    <%--<div id="pageDemo"></div>--%>
-<%--</div>--%>
 <script type="text/html" id="barDemo">
     <a class="layui-btn layui-btn-primary layui-btn-sm" lay-event="detail">查看</a>
     <a class="layui-btn layui-btn-sm" lay-event="edit">编辑</a>

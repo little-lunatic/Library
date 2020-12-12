@@ -14,9 +14,7 @@
 	</context:component-scan>
 
 	<!-- 加载外部属性配置文件 -->
-	<bean id="propertyPlaceholderConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-		<property name="locations" value="classpath:config/jdbc.properties" />
-	</bean>
+	<context:property-placeholder location="classpath:config/jdbc.properties"/>
 
 	<!-- 配置C3P0数据源 -->
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">

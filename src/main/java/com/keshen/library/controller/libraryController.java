@@ -61,13 +61,8 @@ public class libraryController {
         //获取类别
         List<Category> categoryList = bookService.listCategory();
         session.setAttribute(Const.CATEGORY,categoryList);
-
-        // 转化为json
-        //List<Book> list = bookService.listAllBook(pageBean);
-        //PageBean pb=bookService.getPb();
-        // 讲json发送给浏览器
-        // list转成json
         JSONObject obj = new JSONObject();
+
         // Layui table 组件要求返回的格式
         obj.put("code", 0);
         obj.put("msg", "");
