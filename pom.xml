@@ -252,5 +252,6 @@
         <version>2.2</version>
       </plugin>
     </plugins>
+
   </build>
 </project>
