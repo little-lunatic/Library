@@ -21,7 +21,7 @@ public class TypeController {
     //跳转到图书分类界面
     @RequestMapping("/bookType")
     public String bookType() {
-        return "/book/bookType";
+        return "book/bookType";
     }
 
 

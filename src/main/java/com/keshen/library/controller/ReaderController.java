@@ -54,7 +54,7 @@ public class ReaderController {
     //添加页面跳转
     @RequestMapping("/addReader")
     public String addreader() {
-        return "/reader/addReader";
+        return "reader/addReader";
     }
 
     @RequestMapping("/editReader")
@@ -62,7 +62,7 @@ public class ReaderController {
         Reader reader = readerService.selectById(id);
         model.addAttribute("reader",reader);
         model.addAttribute("code",1);
-        return "/reader/addReader";
+        return "reader/addReader";
     }
 
     //修改读者信息
@@ -87,7 +87,7 @@ public class ReaderController {
     public String findReader(Integer id,Model model) {
         Reader reader = readerService.selectById(id);
         model.addAttribute("reader",reader);
-        return "/reader/addReader";
+        return "reader/addReader";
     }
 
     //删除读者

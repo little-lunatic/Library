@@ -1,6 +1,7 @@
 package com.keshen.library.util;
 
 public class AjaxResult {
+
     private boolean success;
     private String message;
     private String status;

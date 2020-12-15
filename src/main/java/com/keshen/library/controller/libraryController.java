@@ -32,7 +32,7 @@ public class libraryController {
     @Autowired
     private LendInfoSerivce lendInfoSerivce;
 
-
+    //
     @RequestMapping("/index")
     public String index(HttpSession session){
         //获取类别

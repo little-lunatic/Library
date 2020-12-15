@@ -79,7 +79,7 @@
         table.render({
             elem: '#demo'
             ,height: 550
-            ,url: 'listDisBackBook.do' //数据接口
+            ,url: 'listDisBackBook' //数据接口
             ,title: '图书表'
             ,page: true
             ,limit: 6

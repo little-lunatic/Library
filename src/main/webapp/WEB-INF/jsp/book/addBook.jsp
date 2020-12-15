@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/modules/layer/default/layer.css">
 
-    <script src="js/laydate.js"></script> <!-- 要在layui 的前边不然时间插件失效 -->
-    <script src="js/layui.js" ></script>
+    <script src="/js/laydate.js"></script> <!-- 要在layui 的前边不然时间插件失效 -->
+    <script src="/js/layui.js" ></script>
     <style>
         body{padding: 20px;}
         .demo-input{padding-left: 10px; height: 38px; min-width: 262px; line-height: 38px; border: 1px solid #e6e6e6;  background-color: #fff;  border-radius: 2px;}
@@ -140,16 +140,12 @@
         var $ = layui.jquery;
         //添加ajax表单提交
         form.on('submit(addbook)',function (data) {
-//            if(!new RegExp("^[0-9]*$").test(data.field.price)){
-//                layer.msg("价格必须是数字");
-//                return false;
-//            }
             if(!new RegExp("^[0-9]*$").test(data.field.stock)){
                 layer.msg("库存必须是数字!");
                 return false;
             }
             $.ajax({
-                url:'library/submitAddBook.do',
+                url:'library/submitAddBook',
                 data:data.field,
                 dataType:'json',
                 type:'post',
@@ -180,7 +176,7 @@
             }
 
             $.ajax({
-                url:'library/updateBook.do',
+                url:'library/updateBook',
                 data:data.field,
                 dataType:'json',
                 type:'post',

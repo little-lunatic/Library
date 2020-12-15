@@ -2,10 +2,10 @@
 <html>
 <head>
     <title>修改密码</title>
-    <link rel="stylesheet" href="css/layui.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/modules/layer/default/layer.css">
-    <script src="js/layui.js" ></script>
+    <link rel="stylesheet" href="/css/layui.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/modules/layer/default/layer.css">
+    <script src="/js/layui.js" ></script>
 </head>
 <body>
 <div class="login-main">
@@ -78,7 +78,7 @@
             $('#user').blur(function() {
                 var user = $(this).val();
                 $.ajax({
-                    url:'checkPwd.do?',
+                    url:'checkPwd',
                     type:'post',
                     dataType:'json',
                     data:{password:user,state:${state}},
@@ -116,14 +116,14 @@
             //添加表单监听事件,提交注册信息
             form.on('submit(sub)', function(data) {
                 $.ajax({
-                    url:'alterpwd.do',
+                    url:'alterpwd',
                     data:data.field,
                     dataType:'json',
                     type:'post',
                     success:function(data){
                         if (data.success) {
                             layer.alert(data.message,function(){
-                                window.parent.location.href = "toLogin.htm";//刷新父页面
+                                window.parent.location.href = "toLogin";//刷新父页面
                                 parent.layer.close(index);//关闭弹出层
                             });
                         }else {

@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: WDD
-  Date: 2019/6/15
-  Time: 20:05
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -14,12 +7,12 @@
 <head>
     <title>添加读者页面</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
-    <link rel="stylesheet" href=".css/layui.css"  media="all">
-    <link rel="css/modules/laydate/default/laydate.css" >
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/modules/layer/default/layer.css">
-    <script src="js/laydate.js"></script> <!-- 要在layui 的前边不然时间插件失效 -->
-    <script src="js/layui.js" ></script>
+    <link rel="stylesheet" href="/css/layui.css"  media="all">
+    <link rel="/css/modules/laydate/default/laydate.css" >
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/modules/layer/default/layer.css">
+    <script src="/js/laydate.js"></script> <!-- 要在layui 的前边不然时间插件失效 -->
+    <script src="/js/layui.js" ></script>
     <style>
         body{padding: 20px;}
         .demo-input{padding-left: 10px; height: 38px; min-width: 262px; line-height: 38px; border: 1px solid #e6e6e6;  background-color: #fff;  border-radius: 2px;}
@@ -28,7 +21,7 @@
     </style>
 </head>
 <body>
-<form class="layui-form" action="library/submitAddReader.do" method="post" id="addbook" lay-filter="example">
+<form class="layui-form" action="library/submitAddReader" method="post" id="addbook" lay-filter="example">
     <div class="layui-form-item">
 
         <div class="layui-inline">
@@ -126,7 +119,7 @@
                 return false;
             }
             $.ajax({
-                url:'submitAddReader.do',
+                url:'submitAddReader',
                 data:data.field,
                 dataType:'json',
                 type:'post',
@@ -158,7 +151,7 @@
                     return false;
                 }
                 $.ajax({
-                    url:'reader/updateReader.do',
+                    url:'reader/updateReader',
                     data:data.field,
                     dataType:'json',
                     type:'post',

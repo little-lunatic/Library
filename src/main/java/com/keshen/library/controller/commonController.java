@@ -34,7 +34,7 @@ public class commonController {
 
 
     //跳转登录界面
-    @RequestMapping("/tLogin")
+    @RequestMapping("/toLogin")
     public String login(){
         return "login";
     }
@@ -51,10 +51,12 @@ public class commonController {
     @RequestMapping("/checkReader")
     @ResponseBody
     public AjaxResult checkreader(Integer reader_id) {
+
         AjaxResult ajaxResult = new AjaxResult();
-        int count=readerService.checkReader(reader_id);
-        if(count==0){
+        int count = readerService.checkReader(reader_id);
+        if(count == 0){
             ajaxResult.setSuccess(true);
+
         }else{
             ajaxResult.setSuccess(false);
             ajaxResult.setMessage("当前学号已被注册!");

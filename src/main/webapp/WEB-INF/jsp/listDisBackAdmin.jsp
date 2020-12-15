@@ -35,9 +35,6 @@
     <div id="pageDemo"></div>
 </div>
 <script type="text/html" id="barDemo">
-        <%--<a class="layui-btn layui-btn-primary layui-btn-sm" lay-event="detail">查看</a>--%>
-        <%--<a class="layui-btn layui-btn-sm" lay-event="edit">编辑</a>--%>
-        <%--<a class="layui-btn layui-btn-danger layui-btn-sm" lay-event="del">删除</a>--%>
     {{#  if(d.state =="2"){ }}
     <a class="layui-btn layui-btn-normal backBook" lay-event="backBook">确认归还</a>
     {{#  } }}
@@ -82,7 +79,7 @@
         table.render({
             elem: '#demo'
             ,height: 550
-            ,url: 'listDisBackBook.do?power=1' //数据接口
+            ,url: 'listDisBackBook?power=1' //数据接口
             ,title: '图书表'
             ,page: true
             ,limit: 6
@@ -142,7 +139,7 @@
         });
         function backBook(data1,obj,index){
             $.ajax({
-                url:'backBook.do?reader_id='+data1.reader_id+'&book_id='+data1.book_id,
+                url:'backBook?reader_id='+data1.reader_id+'&book_id='+data1.book_id,
                 dataType:'json',
                 type:'post',
                 success:function (data) {

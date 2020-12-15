@@ -7,14 +7,22 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>图书管理系统</title>
+    <link rel="stylesheet" href="/css/layui.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/modules/layer/default/layer.css">
+
+    <script src="/js/layui.js"></script>
+    <script src="/js/modules/layer.js"></script>
 
     <style>
         .demo-carousel{height: 200px; line-height: 200px; text-align: center;}
     </style>
 </head>
+
 <body class="layui-layout-body">
 <div class="layui-layout layui-layout-admin">
     <jsp:include page="/WEB-INF/jsp/common/header.jsp" flush="true"/>
+
     <!-- 搜索条件表单 -->
     <div class="demoTable layui-form">
         <div class="layui-inline">
@@ -50,7 +58,6 @@
     <a class="layui-btn layui-btn-danger layui-btn-sm" lay-event="del">删除</a>
 </script>
 
-<script src="js/layui.js"></script>
 <script>
 
 
@@ -66,7 +73,7 @@
             title: '添加图书',
             skin: 'layui-layer-demo', //加上边框
             area: ['800px', '600px'], //宽高
-            content: 'library/addBook.do'
+            content: 'library/addBook'
         });
     }
 
@@ -89,7 +96,7 @@
         table.render({
             elem: '#demo'
             ,height: 550
-            ,url: 'library/listBook.do' //数据接口
+            ,url: 'library/listBook' //数据接口
             ,title: '图书表'
             ,page: true
             ,limit: 5
@@ -155,7 +162,7 @@
         function del(book_id,obj,index){
 
             $.ajax({
-                url:'library/delBook.do?book_id='+book_id,
+                url:'library/delBook?book_id='+book_id,
                 dataType:'json',
                 type:'post',
                 success:function (data) {
@@ -178,7 +185,7 @@
                 skin: 'layui-layer-demo', //加上边框
                 area: ['800px', '600px'], //宽高
                 method: 'post',
-                content: 'library/editBook.do?'
+                content: 'library/editBook?'
                 +'book_id='+data.book_id
             });
         }
@@ -190,7 +197,7 @@
                 skin: 'layui-layer-demo', //加上边框
                 area: ['800px', '600px'], //宽高
                 method: 'post',
-                content: 'library/findBook.do?'
+                content: 'library/findBook?'
                 +'book_id='+data.book_id
             });
         }

@@ -31,11 +31,11 @@
 
 
     <!--处理文件上传-->
-    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"
+<!--    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"
           p:defaultEncoding="UTF-8">
         <property name="maxUploadSize" value="20971520"/>
         <property name="resolveLazily" value="true"/>
-    </bean>
+    </bean>-->
 
 <!--    &lt;!&ndash;拦截器&ndash;&gt;
     <mvc:interceptors>

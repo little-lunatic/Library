@@ -17,6 +17,7 @@
     <header class="layui-elip" style="width: 82%;;margin-top:40px">注册页</header>
     <!-- 表单选项 -->
     <form class="layui-form" action="library/submitAddReader.action" method="post">
+        <!--学号-->
         <div class="layui-input-inline">
             <div class="layui-inline" style="width: 85%">
                 <input type="text" id="user" name="reader_id" required  lay-verify="required" placeholder="请输入学号" autocomplete="off" class="layui-input">
@@ -91,17 +92,19 @@
             <button type="submit" lay-submit lay-filter="sub" class="layui-btn">注册</button>
         </div>
         <hr style="width: 85%" />
-        <p style="width: 85%"><a href="toLogin.htm" class="fl">已有账号？立即登录</a></p>
+        <p style="width: 85%"><a href="toLogin" class="fl">已有账号？立即登录</a></p>
     </form>
 </div>
 
 <script>
+    //作为独立组件使用
     //执行一个laydate实例
     laydate.render({
         elem: '#test1', //指定元素
         trigger: 'click'
     });
 </script>
+
 <script type="text/javascript">
     layui.use(['form','jquery','layer'], function () {
         var form   = layui.form;
@@ -116,7 +119,7 @@
 
             //alert(user);
             $.ajax({
-                url:'checkReader.do',
+                url:'checkReader',
                 type:'post',
                 dataType:'json',
                 data:{reader_id:user},
@@ -175,14 +178,14 @@
                 return false;
             }
             $.ajax({
-                url:'submitAddReader.do',
+                url:'submitAddReader',
                 data:data.field,
                 dataType:'json',
                 type:'post',
                 success:function(data){
                     if (data.success) {
                         layer.msg(data.message);
-                        location.href = "toLogin.htm";
+                        location.href = "toLogin";
                     }else {
                         layer.msg(data.message);
                     }
@@ -194,5 +197,6 @@
 
     });
 </script>
+
 </body>
 </html>

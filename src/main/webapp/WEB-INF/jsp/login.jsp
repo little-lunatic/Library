@@ -36,7 +36,7 @@
         </div>
         <hr/>
         <p>
-            <a href="toRegister.htm" class="fl">立即注册</a>
+            <a href="toRegister" class="fl">立即注册</a>
             <a href="javascript:;" onclick="forgetpsw();" class="fr">忘记密码？</a>
         </p>
     </form>
@@ -53,22 +53,18 @@
 
         form.on('submit(login)',function (data) {
             $.ajax({
-                url:'doLogin.do',
+                url:'doLogin',
                 data:data.field,
                 dataType:'json',
                 type:'post',
                 success:function (data) {
                     if (data.status == '0'){
-                        location.href = "library/index.do";
+                        location.href = "library/index";
 
                     }else if (data.status == '1') {
-                        location.href = "library/frontIndex.htm";
+                        location.href = "library/frontIndex";
 
-                    }else if (data.status == '2'){
-                        layer.msg(data.message);
-
-                    }else{
-                        //服务器异常
+                    } else{
                         layer.msg(data.message);
                     }
                 }
@@ -77,8 +73,9 @@
         })
     });
 
+    //点击忘记密码   触发函数
     function forgetpsw(){
-        layer.msg('联系管理员(4399)或到图书馆进行重置');
+        layer.msg('联系管理员(博客园：柯神_)或到图书馆进行重置');
     }
 </script>
 </body>
