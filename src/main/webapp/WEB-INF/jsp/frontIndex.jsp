@@ -52,9 +52,6 @@
 <script type="text/html" id="barDemo">
     <%-- 必须使用 button--%>
     <button class="layui-btn layui-btn-normal layui-btn-sm lend" lay-event="lend">借阅</button>
-    <%--	<button class="layui-btn layui-btn-sm lend layui-btn-disabled" lay-event="lend" disabled="disabled">已借阅</button>--%>
-
-
 </script>
 <script>
     //JavaScript代码区域
@@ -65,6 +62,7 @@
 </script>
 
 <script src="/js/layui.js"></script>
+<script src="/js/lay/modules/laypage.js"></script>
 <script>
 
 

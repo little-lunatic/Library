@@ -28,12 +28,12 @@
             <li class="layui-nav-item">
                 <a href="javascript:;">图书管理</a>
                 <dl class="layui-nav-child">
-                    <dd><a href="library/index">图书列表</a></dd>
-                    <dd><a href="type/bookType">分类管理</a></dd>
+                    <dd><a href="/library/index">图书列表</a></dd>
+                    <dd><a href="/type/bookType">分类管理</a></dd>
                 </dl>
             </li>
-            <li class="layui-nav-item"><a href="reader/readerIndex">读者列表</a></li>
-            <li class="layui-nav-item"><a href="listDisBackAdmin">借阅管理</a></li>
+            <li class="layui-nav-item"><a href="/reader/readerIndex">读者列表</a></li>
+            <li class="layui-nav-item"><a href="/listDisBackAdmin">借阅管理</a></li>
             <li class="layui-nav-item"><a onclick="alterPwd('0');">修改密码</a></li>
         </c:if>
         <c:if test="${reader!=null}">
@@ -45,18 +45,17 @@
     <ul class="layui-nav layui-layout-right">
         <li class="layui-nav-item">
             <a href="javascript:;">
-                <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+                <img src="https://pic.cnblogs.com/avatar/2188008/20201020233049.png" class="layui-nav-img">
                 ${admin.name}
             </a>
         </li>
-        <li class="layui-nav-item"><a href="loginout">退出</a></li>
+        <li class="layui-nav-item"><a href="/loginout">退出</a></li>
     </ul>
 </div>
-
-
 <div style="padding: 15px;"></div>
 </body>
 <script src="/js/layui.js"></script>
+<script src="/js/lay/modules/laypage.js"></script>
 <script>
 
     function alterPwd(state){//添加

@@ -53,6 +53,7 @@
 </script>
 
 <script src="/js/layui.js"></script>
+<script src="/js/lay/modules/laypage.js"></script>
 <script>
 
 

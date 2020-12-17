@@ -13,6 +13,7 @@
 
     <script src="/js/layui.js"></script>
     <script src="/js/modules/layer.js"></script>
+    <script src="/js/lay/modules/laypage.js"></script>
 
     <style>
         .demo-carousel{height: 200px; line-height: 200px; text-align: center;}
@@ -20,6 +21,8 @@
 </head>
 
 <body class="layui-layout-body">
+
+<%--搜素条件--%>
 <div class="layui-layout layui-layout-admin">
     <jsp:include page="/WEB-INF/jsp/common/header.jsp" flush="true"/>
 
@@ -48,8 +51,6 @@
 
 
 
-
-
 <table class="layui-hide" id="demo" lay-filter="test"></table>
 
 <script type="text/html" id="barDemo">
@@ -59,13 +60,9 @@
 </script>
 
 <script>
-
-
     layui.config({
         version: '1554901098009' //为了更新 js 缓存，可忽略
     });
-
-
     function add(){//添加
 
         layer.open({

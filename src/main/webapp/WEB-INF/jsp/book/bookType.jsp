@@ -6,6 +6,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <script src="/js/layui.js"></script>
+    <script src="/js/lay/modules/laypage.js"></script>
     <title>图书类别</title>
 </head>
 <body class="layui-layout-body">
