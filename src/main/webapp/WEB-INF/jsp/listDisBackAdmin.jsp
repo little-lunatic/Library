@@ -52,7 +52,7 @@
     var url = ""
 </script>
 
-<script src="js/layui.js"></script>
+<script src="/js/layui.js"></script>
 <script>
 
 
@@ -79,7 +79,7 @@
         table.render({
             elem: '#demo'
             ,height: 550
-            ,url: 'listDisBackBook?power=1' //数据接口
+            ,url: '/listDisBackBook?power=1' //数据接口
             ,title: '图书表'
             ,page: true
             ,limit: 6
@@ -139,7 +139,7 @@
         });
         function backBook(data1,obj,index){
             $.ajax({
-                url:'backBook?reader_id='+data1.reader_id+'&book_id='+data1.book_id,
+                url:'/backBook?reader_id='+data1.reader_id+'&book_id='+data1.book_id,
                 dataType:'json',
                 type:'post',
                 success:function (data) {

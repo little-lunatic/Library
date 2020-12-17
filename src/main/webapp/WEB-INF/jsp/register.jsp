@@ -119,7 +119,7 @@
 
             //alert(user);
             $.ajax({
-                url:'checkReader',
+                url:'/checkReader',
                 type:'post',
                 dataType:'json',
                 data:{reader_id:user},
@@ -178,7 +178,7 @@
                 return false;
             }
             $.ajax({
-                url:'submitAddReader',
+                url:'/submitAddReader',
                 data:data.field,
                 dataType:'json',
                 type:'post',

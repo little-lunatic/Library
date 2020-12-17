@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="/css/layui.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/modules/layer/default/layer.css">
-    <script src="js/layui.js"></script>
+    <script src="/js/layui.js"></script>
 </head>
 <body>
 
 <div class="login-main">
     <header class="layui-elip">图书管理系统登录</header>
-    <form class="layui-form" action="library/list.action" method="post">
+    <form class="layui-form" action="" method="post">
         <div class="layui-input-inline">
             <input type="text" name="name" required lay-verify="required" placeholder="学号" autocomplete="off"
                    class="layui-input">
@@ -53,16 +53,16 @@
 
         form.on('submit(login)',function (data) {
             $.ajax({
-                url:'doLogin',
+                url:'/doLogin',
                 data:data.field,
                 dataType:'json',
                 type:'post',
                 success:function (data) {
                     if (data.status == '0'){
-                        location.href = "library/index";
+                        location.href = "/library/index";
 
                     }else if (data.status == '1') {
-                        location.href = "library/frontIndex";
+                        location.href = "/library/frontIndex";
 
                     } else{
                         layer.msg(data.message);

@@ -46,7 +46,10 @@ public class libraryController {
     @ResponseBody
     public String listBook(@RequestParam(value = "page", defaultValue = "1") Integer pageno,
                            @RequestParam(value = "limit", defaultValue = "5") Integer pagesize,
-                           String bname,String author,String cid,HttpSession session
+                           String bname,
+                           String author,
+                           String cid,
+                           HttpSession session
                            ) {
 
         Map<String,Object> paramMap = new HashMap();

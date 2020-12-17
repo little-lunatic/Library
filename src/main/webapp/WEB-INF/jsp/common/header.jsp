@@ -17,10 +17,11 @@
         }
     </style>
 </head>
+
+<!-- 头部区域 layui水平导航栏 -->
 <body>
 <div class="layui-header">
     <div class="layui-logo">图书管理系统</div>
-    <!-- 头部区域（可配合layui已有的水平导航） -->
     <ul class="layui-nav layui-layout-left">
 
         <c:if test="${admin!=null}">
@@ -45,7 +46,6 @@
         <li class="layui-nav-item">
             <a href="javascript:;">
                 <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
-                <%--${admin2.name }--%>
                 ${admin.name}
             </a>
         </li>
@@ -56,7 +56,7 @@
 
 <div style="padding: 15px;"></div>
 </body>
-<script src="js/layui.js"></script>
+<script src="/js/layui.js"></script>
 <script>
 
     function alterPwd(state){//添加
@@ -65,7 +65,7 @@
             title: '修改密码',
             skin: 'layui-layer-demo', //加上边框
             area: ['500px', '300px'], //宽高
-            content: 'toAlterpwdPage?state='+state
+            content: '/toAlterpwdPage?state='+state
         });
     }
 

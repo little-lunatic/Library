@@ -134,10 +134,11 @@
 </script>
 
 <script type="text/javascript">
+
     layui.use(['form','layer','jquery'], function () {
         // 操作对象
-        var form = layui.form;
-        var $ = layui.jquery;
+        const form = layui.form;
+        const $ = layui.jquery;
         //添加ajax表单提交
         form.on('submit(addbook)',function (data) {
             if(!new RegExp("^[0-9]*$").test(data.field.stock)){
@@ -145,7 +146,7 @@
                 return false;
             }
             $.ajax({
-                url:'library/submitAddBook',
+                url:'/library/submitAddBook',
                 data:data.field,
                 dataType:'json',
                 type:'post',
@@ -176,7 +177,7 @@
             }
 
             $.ajax({
-                url:'library/updateBook',
+                url:'/library/updateBook',
                 data:data.field,
                 dataType:'json',
                 type:'post',

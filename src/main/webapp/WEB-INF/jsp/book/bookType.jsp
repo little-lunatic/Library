@@ -39,7 +39,7 @@
             table.render({
                 elem: '#demo'
                 ,height: 550
-                ,url: 'type/bookTypeList' //数据接口
+                ,url: '/type/bookTypeList' //数据接口
                 ,title: '图书表'
                 ,cols: [[ //表头
                     {field: 'cname', title: '类别名称', width:300, align:'center'}
@@ -68,7 +68,7 @@
                 layer.prompt({title: '修改类别',value:data1.cname, formType: 2}, function(text, index){
                     layer.close(index);
                     $.ajax({
-                        url:'type/editBookType',
+                        url:'/type/editBookType',
                         data:{'cid':data1.cid,'cname':text},
                         dataType:'json',
                         type:'post',
@@ -90,7 +90,7 @@
             function del(cid,obj,index){
 
                 $.ajax({
-                    url:'type/delBookType?cid='+cid,
+                    url:'/type/delBookType?cid='+cid,
                     dataType:'json',
                     type:'post',
                     success:function (data) {
@@ -113,7 +113,7 @@
                 layer.prompt({title: '添加类别', formType: 2}, function(text, index){
                     layer.close(index);
                     $.ajax({
-                        url:'type/addBookType',
+                        url:'/type/addBookType',
                         data:{'cname':text},
                         dataType:'json',
                         type:'post',

@@ -78,7 +78,7 @@
             $('#user').blur(function() {
                 var user = $(this).val();
                 $.ajax({
-                    url:'checkPwd',
+                    url:'/checkPwd',
                     type:'post',
                     dataType:'json',
                     data:{password:user,state:${state}},
@@ -116,7 +116,7 @@
             //添加表单监听事件,提交注册信息
             form.on('submit(sub)', function(data) {
                 $.ajax({
-                    url:'alterpwd',
+                    url:'/alterpwd',
                     data:data.field,
                     dataType:'json',
                     type:'post',

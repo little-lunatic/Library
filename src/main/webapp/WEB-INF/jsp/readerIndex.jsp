@@ -52,8 +52,7 @@
     var url = ""
 </script>
 
-<script src="js/layui.js"></script>
-<%--<script src="js/reader/CRUDreader.js"></script>--%>
+<script src="/js/layui.js"></script>
 <script>
 
 
@@ -68,7 +67,7 @@
             title: '添加读者',
             skin: 'layui-layer-demo', //加上边框
             area: ['800px', '500px'], //宽高
-            content: 'reader/addReader'
+            content: '/reader/addReader'
         });
     }
 
@@ -88,7 +87,7 @@
         table.render({
             elem: '#demo'
             ,height: 550
-            ,url: 'reader/listReader' //数据接口
+            ,url: '/reader/listReader' //数据接口
             ,title: '图书表'
             ,page: true
             ,limit: 6
@@ -150,7 +149,7 @@
         function del(id,obj,index){
 
             $.ajax({
-                url:'reader/delReader?id='+id,
+                url:'/reader/delReader?id='+id,
                 dataType:'json',
                 type:'post',
                 success:function (data) {
@@ -173,7 +172,7 @@
                 skin: 'layui-layer-demo', //加上边框
                 area: ['800px', '500px'], //宽高
                 method: 'post',
-                content: 'reader/editReader?'
+                content: '/reader/editReader?'
                 +'id='+data.id
             });
         }
@@ -185,7 +184,7 @@
                 skin: 'layui-layer-demo', //加上边框
                 area: ['800px', '500px'], //宽高
                 method: 'post',
-                content: 'reader/findReader?'
+                content: '/reader/findReader?'
                 +'id='+data.id
             });
         }

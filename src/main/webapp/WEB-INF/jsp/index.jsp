@@ -73,7 +73,7 @@
             title: '添加图书',
             skin: 'layui-layer-demo', //加上边框
             area: ['800px', '600px'], //宽高
-            content: 'library/addBook'
+            content: '/library/addBook'
         });
     }
 
@@ -96,7 +96,7 @@
         table.render({
             elem: '#demo'
             ,height: 550
-            ,url: 'library/listBook' //数据接口
+            ,url: '/library/listBook' //数据接口
             ,title: '图书表'
             ,page: true
             ,limit: 5
@@ -162,7 +162,7 @@
         function del(book_id,obj,index){
 
             $.ajax({
-                url:'library/delBook?book_id='+book_id,
+                url:'/library/delBook?book_id='+book_id,
                 dataType:'json',
                 type:'post',
                 success:function (data) {
@@ -185,7 +185,7 @@
                 skin: 'layui-layer-demo', //加上边框
                 area: ['800px', '600px'], //宽高
                 method: 'post',
-                content: 'library/editBook?'
+                content: '/library/editBook?'
                 +'book_id='+data.book_id
             });
         }
@@ -197,7 +197,7 @@
                 skin: 'layui-layer-demo', //加上边框
                 area: ['800px', '600px'], //宽高
                 method: 'post',
-                content: 'library/findBook?'
+                content: '/library/findBook?'
                 +'book_id='+data.book_id
             });
         }

@@ -119,7 +119,7 @@
                 return false;
             }
             $.ajax({
-                url:'submitAddReader',
+                url:'/submitAddReader',
                 data:data.field,
                 dataType:'json',
                 type:'post',
@@ -151,7 +151,7 @@
                     return false;
                 }
                 $.ajax({
-                    url:'reader/updateReader',
+                    url:'/reader/updateReader',
                     data:data.field,
                     dataType:'json',
                     type:'post',

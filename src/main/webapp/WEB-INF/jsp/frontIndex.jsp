@@ -64,7 +64,7 @@
     });
 </script>
 
-<script src="js/layui.js"></script>
+<script src="/js/layui.js"></script>
 <script>
 
 
@@ -88,7 +88,7 @@
         table.render({
             elem: '#demo'
             , height: 550
-            , url: 'library/listBook' //数据接口
+            , url: '/library/listBook' //数据接口
             , title: '图书表'
             , page: true
             , limit: 5
@@ -150,7 +150,7 @@
 //后边两个参数仅仅是因为要执行动态删除dom
         function lend(obj, index, data1) {
             $.ajax({
-                url: 'library/lendBook?'
+                url: '/library/lendBook?'
                 + 'book_id=' + data1.book_id,
                 dataType: 'json',
                 type: 'post',
