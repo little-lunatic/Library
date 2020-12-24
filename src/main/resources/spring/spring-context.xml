@@ -52,7 +52,8 @@
 
 	<tx:advice id="transactionAdvice" transaction-manager="transactionManager">
 		<tx:attributes>
-			<tx:method name="*" propagation="REQUIRED" isolation="DEFAULT" rollback-for="java.lang.Exception"/>
+			<tx:method name="*" propagation="REQUIRED" isolation="DEFAULT"
+					   rollback-for="java.lang.Exception"/>
 			<tx:method name="query*" read-only="true"/>
 		</tx:attributes>
 	</tx:advice>

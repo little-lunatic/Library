@@ -9,11 +9,7 @@
     <title>图书管理系统</title>
     <link rel="stylesheet" href="/css/layui.css">
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/modules/layer/default/layer.css">
-
     <script src="/js/layui.js"></script>
-    <script src="/js/modules/layer.js"></script>
-    <script src="/js/lay/modules/laypage.js"></script>
 
     <style>
         .demo-carousel{height: 200px; line-height: 200px; text-align: center;}
@@ -48,8 +44,6 @@
         <a style="margin-left: 70px" class="layui-btn layui-btn-normal" onclick="add();">添加图书</a>
     </div>
 </div>
-
-
 
 <table class="layui-hide" id="demo" lay-filter="test"></table>
 
@@ -157,9 +151,8 @@
         });
         //后边两个参数仅仅是因为要执行动态删除dom
         function del(book_id,obj,index){
-
             $.ajax({
-                url:'/library/delBook?book_id='+book_id,
+                url:'${pageContext.request.contextPath}/library/delBook?book_id='+book_id,
                 dataType:'json',
                 type:'post',
                 success:function (data) {
